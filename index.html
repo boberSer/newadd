@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просто купить ПК</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="header-line" id="header-line">            
+            <div class="header-logo">
+                <img src="лого1.jpg" height="100px" alt="">
+            </div>
+            <div class="nav">
+                <a class="nav-item" href="#regone">КАТАЛОГ</a>
+                <a class="nav-item" href="#cartSelection">КОРЗИНА</a>
+                <a class="nav-item" href="#order">ОФОРМЛЕННЫЕ ЗАКАЗЫ</a>
+                <a class="nav-item" href="@">ОБРАТНАЯ СВЯЗЬ</a>
+            </div>
+
+            <div></div>
+
+        <div class="header-down">
+            
+            <button id="burger" class="header-buttonn">
+                Нет, не зарегестрирован
+            </button>
+                            
+            <div id="menu" class="burger-slide disp" >
+                <form action="" id="form1">
+                    <div>РЕГЕСТРАЦИЯ</div>
+                    <label>
+                        
+                        <div>Фамилия: <input required type="text" name="Фамилия" id="signupФамилия" value=""></div>
+                        <div>Имя: <input required type="text" name="Имя" id="signupИмя" value=""></div>
+                        <div>Отчество: <input required type="text" name="Отчество" id="signupОтчество" value=""></div>
+                        <div>Email: <input required type="text" name="Email" id="signupEmail" value="" ></div>
+                        <div>Пароль: <input required type="text" name="Пароль" id="signupПароль" value=""></div>
+                        <button type="submit" id="regreg" onclick="store()">Зарегестироваться</button>
+                    </label>
+                </form>
+                
+            </div>
+
+
+            <div class="header-title">
+                Добро пожаловать на наш сайт, <br> Вы уже зарегестрированы?
+            </div>
+            
+            <button id="burgertwo" class="header-button">Да, зарегестрирован</button>
+            
+            <div id="menutwo" class="burger-slidetwo disp" >
+                
+                    <div>ВХОД</div>
+                    <label>
+
+                        <div>Email: <input required type="text" name="Email" id="vhodEmail"></div>
+                        <div>Пароль: <input required type="text" name="Пароль" id="vhodPassword"></div>
+                        <button id="regvhod" type="submit" onclick="check()">Войти</button>
+                    </label>
+                
+                
+            </div>
+            
+
+        </div>
+
+        </div>
+    </div>
+
+
+</div>    
+
+<div id="regone" class="katalog">
+    <div class="container">
+        <div class="nav1">
+            <a class="nav-item" href="#regone">КАТАЛОГ</a>
+            <a class="nav-item" href="#cartSelection">КОРЗИНА</a>
+            <a class="nav-item" href="#order">ОФОРМЛЕННЫЕ ЗАКАЗЫ</a>
+            <a class="nav-item" href="@">ОБРАТНАЯ СВЯЗЬ</a>
+        </div>
+
+        <div class="katalog-out-button"></div>
+            <button type="submit" id="katalog-outacc-btn" class="katalog-out-btn" onclick="localStorage.clear()">Выйти из аккаунта</button>
+        </div>
+
+        <div class="katalog-title">
+            <h1 id="firstpage" class="firstpage">a</h1>
+            Каталог товаров
+        </div>
+
+        <div class="center">
+            <div class="search">
+                <div class="form">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+            </div>
+        </div>
+
+
+        <h2 class="products">Products</h2>
+        <div class="list">
+            <div class="item" data-key="1">
+                <div class="img">
+                    <img src="Каталог_1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="title">Компухтер 1</div>
+                    <div class="des">Самый лучший ПК за свои деньги</div>
+                    <div class="price">15 тысяч рублей</div>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="add">Добавить</button>
+                    <button class="remove" onclick="Remove(1)">Remove</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="list">
+            <div class="item" data-key="2">
+                <div class="img">
+                    <img src="Каталог_1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <div class="title">Компухтер 1</div>
+                    <div class="des">Самый лучший ПК за свои деньги</div>
+                    <div class="price">15 тысяч рублей</div>
+                    <input type="number" class="count" min="1" value="1">
+                    <button class="add">Добавить</button>
+                    <button class="remove" onclick="Remove(2)">Remove</button>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+</div>
+<div class="cart" id="cartSelection">
+    <div class="nav2">
+        <a class="nav-item2" href="#regone">КАТАЛОГ</a>
+        <a class="nav-item2" href="#cartSelection">КОРЗИНА</a>
+        <a class="nav-item2" href="#order">ОФОРМЛЕННЫЕ ЗАКАЗЫ</a>
+        <a class="nav-item2" href="@">ОБРАТНАЯ СВЯЗЬ</a>
+    </div>
+    <div class="name">CART</div>
+    <div class="listCart">
+        <div class="katalog-back-button"></div>
+            <a href="#order" class="katalog-back-btn">Ранее оформленные заказы</a>
+        </div>
+        <div class="list1"></div>
+            <div class="bomber" id="example">
+                <div class="content">
+                    <div class="des">К сожалению, товаров пока нет.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="of-zakaz" id="order">
+    <div class="container">
+        <div class="of-zakaz-title">
+            Оформленные заказы
+        </div>
+        <div class="nav3">
+            <a class="nav-item" href="#regone">КАТАЛОГ</a>
+            <a class="nav-item" href="#cartSelection">КОРЗИНА</a>
+            <a class="nav-item" href="#order">ОФОРМЛЕННЫЕ ЗАКАЗЫ</a>
+            <a class="nav-item" href="@">ОБРАТНАЯ СВЯЗЬ</a>
+        </div>
+
+        <div class="of-zakaz-items">
+            <div class="of-zakaz-item"></div>
+
+            <div class="of-zakaz-button">
+                <a class="of-zakaz-btn" id="zakaz-back-btn" href="#header-line">Назад на домашнюю страницу</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="main.js"></script>    
+    
+</body>
+</html>
